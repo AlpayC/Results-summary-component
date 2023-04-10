@@ -77,6 +77,11 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --fw700: 700;
     --fw800: 800;
 }
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
 
 html{
     font-size: 62.5%;
@@ -86,12 +91,122 @@ html{
 a{
     text-decoration: none;
 }
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+h1{
+    font-size: 2.4rem;
+    font-weight: var(--fw700);
+    color:#CBC0FF;
+}
+h3{
+    font-size: 2.4rem;
+    font-weight: var(--fw700);
+    color:#33394F;
+}
 .resultbox{
-    border: 2px red solid;
-    margin: 30%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 45vh;
+    box-shadow: 21px 11px 51px 0px var(--Paleblue);
+    border-radius: 32px;
 }
 .resultcolumn{
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: space-around;
+    border-radius: 32px;
+    background: var(--Lightroyalbluebg);
+    background: linear-gradient(180deg, var(--Lightslatebluebg) 0%, var(--Lightroyalbluebg) 100%);
+    padding:1rem 7.5rem 5rem 7.5rem;
+}
+.resultcircle{
+    background: var(--Violetbluecircle);
+    background: linear-gradient(180deg, var(--Violetbluecircle) 0%, var(--Persianbluecircle) 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4rem 6rem;
+}
+.resultnr{
+    color: var(--White);
+    font-size: 7rem;
+    font-weight: var(--fw800);
+}
+.resultborderbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.percent{
+    color:#8A7DFF;
+    font-size: 1.5rem;
+    font-weight: var(--fw800);
+}
+.resulttext{
+    color:var(--Paleblue);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 3rem;
+    margin-bottom:3rem;
+}
+.resultanalysis{
+    display:block;
+    color: #BEBBFF;
+    font-size: 1.8rem;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:1rem 3rem 5rem 3rem;  
+    min-width: 20vw;
+}
+.ratingboxes{
+    font-size: 1.8rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding:1.6rem;
+    border-radius: 12px;
+    
+}
+.ratingboxes:first-of-type{
+    background-color: #FFF6F5;
+}
+.ratingboxes:nth-child(2){
+    background-color:#FFFBF2;
+}
+.ratingboxes:nth-child(3){
+    background-color:#F2FBFA;
+}
+.ratingboxes:nth-child(4){
+    background-color:#F3F3FD;
+}
+.ratings{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+a{
+    display:block;
+    background-color: #303B59;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding:1rem;
+    border-radius: 36px;
+    font-weight: var(--fw700);
 }
