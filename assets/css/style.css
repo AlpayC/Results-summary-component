@@ -101,17 +101,19 @@ h1{
     font-size: 2.4rem;
     font-weight: var(--fw700);
     color:#CBC0FF;
+    margin-bottom: 30px;
 }
 h3{
     font-size: 2.4rem;
     font-weight: var(--fw700);
     color:#33394F;
+    margin-bottom: 30px;
 }
 .resultbox{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 45vh;
+    height: auto;
     box-shadow: 21px 11px 51px 0px var(--Paleblue);
     border-radius: 32px;
 }
@@ -123,7 +125,7 @@ h3{
     border-radius: 32px;
     background: var(--Lightroyalbluebg);
     background: linear-gradient(180deg, var(--Lightslatebluebg) 0%, var(--Lightroyalbluebg) 100%);
-    padding:1rem 7.5rem 5rem 7.5rem;
+    padding: 3rem 5.5rem 5rem 5.5rem;
 }
 .resultcircle{
     background: var(--Violetbluecircle);
@@ -170,8 +172,8 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding:1rem 3rem 5rem 3rem;  
-    min-width: 20vw;
+    padding:3rem 3rem 5rem 3rem;  
+    min-width: 10vw;
 }
 .ratingboxes{
     font-size: 1.8rem;
@@ -180,7 +182,7 @@ h2{
     justify-content: space-between;
     padding:1.6rem;
     border-radius: 12px;
-    
+    gap:4rem;
 }
 .ratingboxes:first-of-type{
     background-color: #FFF6F5;
@@ -193,14 +195,44 @@ h2{
 }
 .ratingboxes:nth-child(4){
     background-color:#F3F3FD;
+    margin-bottom: 30px;
 }
 .ratings{
     display:flex;
     flex-direction: column;
     gap:2rem;
 }
-
-a{
+.icontitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1rem;
+}
+.reaction{
+    color:var(--primarylightred)
+}
+.memory{
+    color:var(--Orangeyyellow)
+}
+.verbal{
+    color:var(--Greenteal)
+}
+.visual{
+    color:var(--Cobaltblue)
+}
+.scores{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:0.8rem;
+}
+.ratingboxes .scores p{
+    font-weight: var(--fw700);
+}
+.ratingboxes .scores p:last-of-type{
+    color:#999798;
+}
+.btn{
     display:block;
     background-color: #303B59;
     text-align: center;
@@ -209,4 +241,28 @@ a{
     padding:1rem;
     border-radius: 36px;
     font-weight: var(--fw700);
+}
+
+@media screen and (max-width: 375px){
+    main{
+        justify-content: unset;
+        align-items: unset;
+        display: unset;
+    }
+    .resultbox{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        box-shadow: 21px 11px 51px 0px var(--Paleblue);
+        border-radius: 0px;
+    }
+    .resultcolumn{
+        border-radius: 0 0 32px 32px;
+    }
+    .ratingboxes{
+        padding:2.2rem;
+    }
+    .btn{
+        padding:1.8rem;
+    }
 }
